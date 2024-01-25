@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangoDB Handson</title>
+</head>
+<body>
+    <h1>MangoDB Handson </h1>
+    <h2>Q1:Create a database , give it name like "Human_Resource". Create a collection inside this named "employee"
+    </h2>
+    <p>use Human_Resource</p>
+    <h2>Q2 :Query the collection "employee" and list the employees who are having salary more than 30000 </h2>
+    <p>db.employee.find({salary:{$gt:"30000"}})</p>
+    <h2>Q3:Query the collection "employee" and list the employees who are having experience more than 2 years.</h2>
+    <p>db.employee.find({overallExp:{$gte:"2"}})</p>
+    <h2>Q4:Query the collection "employee" and list the employees who are graduated after 2015 and having experience more than 1 year </h2>
+    <p>db.employee.find({yearGrad:{$gt:"2015"},overallExp:{$gte:"1"}})</p>
+    <h2>Q5 : Query the collection "employee" and update the salary of the employee whose salary is greater than 70000 to 65000.</h2>
+    <p>db.employee.update({ "salary": "70000" },{ $set: { "salary": "65000" }})
+      </p>
+      <h2>Q6: Delete all the documents from "employee" where last company is Y</h2>
+      <p>db.employee.remove({  lastCompany:"Y"})</p>
+</body>
+</html>
